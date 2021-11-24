@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -9,6 +10,7 @@ p{
 }
 body{
     color: var(--text-color);
+    font-family: 'Abel', sans-serif;
     height: 100%;
     background: var(--color-primary);
 }
@@ -74,10 +76,10 @@ header{
     padding: 0px 20px;
 }
 .logo{
-    font-size: 22px;
-    width: 80px;
-    height: 8vh;
-    display: inline-block;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 .nav-links{
     display: flex;
@@ -93,6 +95,7 @@ header{
 }
 .nav-list ol{
     display: flex;
+    font-family: 'Abel', sans-serif;
 }
 .nav-list-social{
     display: flex;
@@ -143,7 +146,18 @@ ul > li{
 /* menu mobile */
 /* --------------------------------------*/
 .big-heading{
+    color: transparent;
     font-size: 80px;
+    -webkit-text-stroke: 1px var(--text-color);
+    background: url(/vendor/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 #main{
     margin-top: 10%;
@@ -328,14 +342,15 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
     }
     .project-body{
-        width: 90%;
+        width: 100%;
         margin-right: 0px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
     }
 }
 @media only screen and (max-width: 667px){
@@ -345,6 +360,12 @@ footer{
     #main{
         margin-bottom: 40%;
         height: auto;
+    }
+    .content-columns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .profile-foto{
         width: 200px;
