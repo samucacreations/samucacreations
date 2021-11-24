@@ -81,12 +81,6 @@ header{
     font-weight: 600;
     letter-spacing: 2px;
 }
-.nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
-}
 .nav-list{
     display: flex;
     align-items: center;
@@ -100,7 +94,7 @@ header{
 .nav-list-social{
     display: flex;
 }
-.nav-list li{
+.nav-list ol > li{
     margin-left: 34px;
 }
 .nav-list i{
@@ -109,6 +103,7 @@ header{
 /* animate icon */
 .nav-list-social {
     overflow: hidden;
+    margin-left: 12px;
 }
 .nav-list-social li{
     position: relative;
@@ -353,9 +348,20 @@ footer{
         flex-direction: row;
     }
 }
-@media only screen and (max-width: 667px){
+@media (max-width: 35em){
     .big-heading{
         font-size: 20px;
+    }
+    .nav-list{
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: hsl(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(1rem);
+    }
+    .nav-list .nav-ol-list{
+        flex-direction: column;
     }
     #main{
         margin-bottom: 40%;
