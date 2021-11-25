@@ -354,14 +354,29 @@ footer{
     }
     .nav-list{
         position: fixed;
+        z-index: 1000;
+        --gap: 6em;
+
         inset: 0 0 0 30%;
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
         background: hsl(0, 0%, 100%, 0.1);
         backdrop-filter: blur(1rem);
     }
+    .nav-list ol > li{
+        font-size: 1.3em;
+    }
     .nav-list .nav-ol-list{
         flex-direction: column;
+    }
+    .mobile-nav-toggle{
+        position: absolute;
+        z-index: 9999;
+        background: red;
+        width: 1rem;
+        aspect-ratio: 1; /* Apontado para lembrar */
+        top: 2rem;
+        right: 1rem;
     }
     #main{
         margin-bottom: 40%;
