@@ -25,17 +25,14 @@
 </head>
 <body>
     <header>
-        <div class="col-12 nav-container">
-            <a class="logo" href="index.html">NICODE</a>
-            <button class="mobile-nav-toggle" aria-controls="nav-list" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-            </button>
-            <div class="mobile-menu" aria-controls="nav-list" aria-expanded="false">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+        <a href="index.html"><img class="logo" src="assets/img/logo.jpg" alt="logo-name"></a>
+        <nav>
+            <div class="toggle" aria-controls="nav-list" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav class="nav-list">
+            <div id="nav-list" class="nav-list" data-visible="false">
                 <ol class="nav-ol-list">
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#service">Projetos</a></li>
@@ -68,8 +65,8 @@
                         </a>
                     </li>
                 </ul> 
-            </nav>
-        </div>        
+            </div>
+        </nav>      
     </header>
     <main>
         <div class="container-fluid">
@@ -88,7 +85,7 @@
                             Atualmente, estou focado na construção de produtos acessíveis e centrados no ser humano em Afirmação.
                         </p>
                     </div>
-                    <div class="col btn-cv">
+                    <div class="btn-animado">
                         <a href="#">Curriculum</a>
                     </div>
                 </div>
@@ -250,7 +247,7 @@
                     </div>
                     <div class="btn-links-project">
                         <!--<button class="btn-arquive">Arquivo</button>-->
-                        <button class="btn-arquive">Repositório no Github</button>
+                        <div class="btn-animado"><a href="#">Repositório no Github</a></div>
                     </div>
                 </div>
             </section>
@@ -269,5 +266,6 @@
     <footer>
         <p>Projetado e construído por Samuel Nicolau.</p>
     </footer>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
