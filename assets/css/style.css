@@ -6,7 +6,8 @@
     user-select: none;
 }
 p{
-    font-size: 1.em;
+    font-size: 19px;
+    color: var(--text-color-light);
 }
 body{
     color: var(--text-color);
@@ -160,7 +161,6 @@ ul > li{
     height: auto;
 }
 .about-me{
-    color: var(--text-color-light);
     width: 600px;
 }
 /* Animação meu nome */
