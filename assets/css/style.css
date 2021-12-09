@@ -15,6 +15,7 @@ body{
     width: 100%;
     height: 100%;
     background: var(--color-primary);
+    cursor: url(cursor.png), pointer;
 }
 /* Barra de rolagem */
 body::-webkit-scrollbar {
@@ -40,7 +41,7 @@ body::-webkit-scrollbar-corner {
     border-radius: 5px;
 }
 :root{
-    --color-secundary: rgb(250, 189, 33);
+    --color-secundary: #fabd21;
     --color-primary: rgb(23, 23, 23);
     --text-color: #ffff;
     --text-color-light: rgb(216, 216, 216);
@@ -202,6 +203,7 @@ ul > li{
     left: 0;
     padding: 5px 15px;
     letter-spacing: 2px;
+    cursor: url(hammer.png), pointer;
 }
 .btn-animado:before{
     content: '';
@@ -237,7 +239,39 @@ ul > li{
     position: relative;
     z-index: 2;
 }
-
+.play-song{
+    width: 80px;
+    height: 30px;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    background: rgb(255, 255, 255, 0);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+}
+.play-song .btns{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.play-song .btns span{
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-song .btns span p{
+    color: var(--color-secundary);
+    font-size: 22px;
+    margin: 0px 6px 0px 0px;
+}
+.play-song .btns span img{
+    width: 20px;
+}
 /* imagens de mim */
 .profile-foto{
     width: 300px;
@@ -321,16 +355,7 @@ ul > li{
     align-items: center;
     justify-content: center;
 }
-/*.btn-arquive{
-    color: var(--text-color-light);
-    width: 200px;
-    height: 40px;
-    margin: 0px 10px;
-    border: 1px solid var(--color-secundary);
-    border-radius: 4px;
-    background: none;
-}
- contato */
+/*contato */
 #contact-area{
     width: 70%;
     height: 260px;
