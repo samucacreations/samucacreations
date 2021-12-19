@@ -1,22 +1,9 @@
-const menuMobile = document.querySelector(".toggle");
-const navList = document.querySelector(".nav-list");
-const navToggle = document.querySelector(".toggle");
-
-//ativando o menu toggle
-menuMobile.onclick = function(){
-    menuMobile.classList.toggle("active")
+const menuMobileBtns = document.getElementsByClassName('btn-mobile-menu');  
+function mobileMenu(){
+    const menu = document.getElementById('nav-toggle'); 
+    menu.classList.toggle('active'); 
 }
-
-// ativando a nav lista.
-navToggle.addEventListener("click", () => {
-    const visibility = navList.getAttribute('data-visible');
-
-    if (visibility === "false"){
-        navList.setAttribute('data-visible', true);
-    }else if (visibility === "true"){
-        navList.setAttribute('data-visible', false);
-    }
-});
+menuMobileBtns.addEventListener('click', mobileMenu);
 // music tocando
 let tocando = document.getElementById('sound');
 let playMusic = document.getElementById('play');
