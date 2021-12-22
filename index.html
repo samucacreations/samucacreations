@@ -11,33 +11,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Fonte Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/aa9ee0dfae.js" crossorigin="anonymous"></script>
-    <!--Ion-icons-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <header>
         <a href="index.html"><img class="logo" src="assets/img/logo.jpg" alt="logo-name"></a>
-        <nav id="menu-toggle">
-            <div class="btn-mobile-menu">Menu
-                <span class="line1"></span>
-                <span class="line2"></span>
-                <span class="line3"></span>
-            </div>
-            <div class="nav-list">
+        <button aria-controls="menu-toggle" aria-expanded="false" class="btn-mobile">
+            <span class="line"></span>
+        </button>
+        <nav>
+            <div id="menu-toggle" class="nav-list" data-visible="false">
                 <ol class="nav-ol-list">
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#service">Projetos</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contact">Contatos</a></li>
+                    <li><a href="#about" aria-hidden="true">Sobre</a></li>
+                    <li><a href="#service" aria-hidden="true">Projetos</a></li>
+                    <li><a href="#portfolio" aria-hidden="true">Portfólio</a></li>
+                    <li><a href="#contact" aria-hidden="true">Contatos</a></li>
                 </ol>
                 <ul class="nav-list-social">
                     <li>
@@ -124,7 +111,9 @@
         </section>
         <!--Conhecimentos-->
         <section id="skills-area">
-            <h1>Conhecimentos</h1>
+            <div class="col-12">
+                <h1 class="main-title">Conhecimentos</h1>
+            </div>
             <div class="skills-content">
                 <div class="box-skills">
                     <button class="btn-skills active"><a href="#">HTML</a></button>
@@ -230,6 +219,17 @@
     <footer>
         <p>Projetado e construído por Samuel Nicolau.</p>
     </footer>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/aa9ee0dfae.js" crossorigin="anonymous"></script>
+    <!--Ion-icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
