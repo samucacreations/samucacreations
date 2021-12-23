@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector('#menu-toggle');
 const btnMobile = document.querySelector('.btn-mobile');
+const scrollBtn = document.querySelector('.btn-scroll');
 
 btnMobile.addEventListener('click', () => {
     const visibility = menuToggle.getAttribute('data-visible');
@@ -12,4 +13,8 @@ btnMobile.addEventListener('click', () => {
        menuToggle.setAttribute('data-visible', false);
        btnMobile.setAttribute('aria-expanded', false);
    }
+});
+
+scrollBtn.addEventListener('click', () => {
+    window.scroll({ top: 0, behavior: 'smooth'})
 });
