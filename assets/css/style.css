@@ -422,18 +422,10 @@ footer{
         -webkit-backdrop-filter: blur(25px);
         transform: translateX(100%);
         transition: transform 350ms ease-in-out;
+        z-index: 13;
     }
     #menu-toggle[data-visible="true"]{
         transform: translateX(0%);
-    }
-    #menu-toggle[data-visible="true"] .line{
-        border-top-color: transparent;
-    }
-    #menu-toggle[data-visible="true"] .line::before{
-        transform: rotate(135deg);
-    }
-    #menu-toggle[data-visible="true"] .line::after{
-        transform: rotate(-135deg);
     }
     #menu-toggle .nav-list{
         padding: 50% 0;
@@ -456,22 +448,39 @@ footer{
         background: none;
         cursor: pointer;
         gap: .5rem;
-        z-index: 9999;
+        z-index: 14;
     }
     .line{
         display: block;
         border-top: 2px solid var(--back-yellow-light);
         width: 40px;
+        z-index: 15;
+    }
+    .line::after{
+        width: 20px;
+    }
+    .line::before{
+        width: 25px;
     }
     .line::after, .line::before{
         content: '';
         display: block;
-        width: 40px;
         border-top: 2px solid var(--back-yellow-light);
         height: 2px;
         margin-top: 9px;
         transition: .5s;
         position: relative;
+    }
+    .btn-mobile[aria-expanded ='true'] > .line{
+        transform: rotate(135deg);
+    }
+    .btn-mobile[aria-expanded ='true'] > .line::before{
+        transform: rotate(135deg);
+        transform: translateX(90px);
+    }
+    .btn-mobile[aria-expanded ='true'] > .line::after{
+        transform: rotate(-135deg);
+        top: -10px;
     }
     .big-heading{
         font-size: 20px;

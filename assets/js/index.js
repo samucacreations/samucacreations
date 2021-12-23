@@ -6,6 +6,7 @@ btnMobile.addEventListener('click', () => {
 
    if (visibility === 'false'){
        menuToggle.setAttribute('data-visible', true);
+       menuToggle.classList.contains('active');
        btnMobile.setAttribute('aria-expanded', true);
    } else if (visibility === "true"){
        menuToggle.setAttribute('data-visible', false);
