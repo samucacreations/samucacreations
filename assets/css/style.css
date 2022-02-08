@@ -46,7 +46,7 @@ body::-webkit-scrollbar-track-piece {
     background: var(--color-primary);
 }
 body::-webkit-scrollbar-thumb {
-    background: rgba(153, 153, 153, 0.548);
+    background: #fabd21;
     border-radius: 5px;
 }
 body::-webkit-scrollbar-corner {
@@ -135,7 +135,8 @@ ul > li{
 /* menu mobile*/
 .big-heading{
     color: transparent;
-    font-size: 80px;
+    font-size: 70px;
+    white-space: nowrap;
     -webkit-text-stroke: 1px var(--text-color);
     background: url(/vendor/back.png);
     -webkit-background-clip: text;
@@ -187,7 +188,6 @@ ul > li{
           filter: blur(12px) opacity(0%);
     }
 }
-
 .btn-animado{
     position: relative;
     display: inline-block;
@@ -232,38 +232,16 @@ ul > li{
     position: relative;
     z-index: 2;
 }
-.play-song{
-    width: 80px;
-    height: 30px;
-    position: fixed;
-    right: 20px;
-    bottom: 40px;
-    background: rgb(255, 255, 255, 0);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 15px;
+#profile-foto{
+    width: 400px;
+    height: 430px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.play-song .btns{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.play-song .btns span{
-    width: 90px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.play-song .btns span p{
-    color: var(--color-secundary);
-    font-size: 22px;
-    margin: 0px 6px 0px 0px;
-}
-.play-song .btns span img{
-    width: 20px;
+.img-user{
+    width: 300px;
+    height: auto;
 }
 /* imagens de mim */
 .profile-foto{
@@ -564,6 +542,9 @@ footer{
     }
     .big-heading{
         font-size: 20px;
+    }
+    .about-coluna{
+        display: ;
     }
     #main{
         margin-bottom: 40%;
