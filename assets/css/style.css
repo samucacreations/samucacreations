@@ -232,34 +232,38 @@ ul > li{
     position: relative;
     z-index: 2;
 }
-#profile-foto{
-    width: 400px;
-    height: 430px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.content-columns{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+.content-columns .colunas{
+    width: 600px;
+}
+.content-columns .colunas p{
+    position: absolute;
+    top: 50%;
+    left: auto;
+    transform: translate(-50%, -50%);
+    letter-spacing: normal;
 }
 .img-user{
     width: 300px;
     height: auto;
-}
-/* imagens de mim */
-.profile-foto{
-    width: 300px;
-    height: 300px;
-    margin: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
-    background: var(--back-white-light);
-    user-select: none;
-    cursor: pointer;
 }
 .main-title{
     color: var(--text-color);
     font-size: 1.8rem;
     width: 100%;
+}
+.main-title span{
+    width: 600px;
+    color: var(--color-secundary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 55pt;
 }
 /* Conhecimentos */
 .skills-content{
@@ -403,8 +407,14 @@ ul > li{
 
 /* rodapé */
 footer{
-    height: 15vh;
+    border-top: 1px solid #fabc2198;
+    padding: 30px;
     text-align: center;
+}
+footer .rodape-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 @media only screen and (max-width: 768px){
     main{
@@ -492,12 +502,6 @@ footer{
     #main{
         margin-top: 30%;
     }
-    .content-columns{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-    }
     .project-body{
         width: 100%;
         margin-right: 0px;
@@ -505,6 +509,11 @@ footer{
         align-items: center;
         justify-content: center;
         flex-direction: row;
+    }
+    footer .rodape-layout{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 @media (max-width: 560px){
@@ -610,5 +619,12 @@ footer{
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    footer .rodape-layout{
+        font-size: 14pt;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
     }
 }
