@@ -243,7 +243,7 @@ ul > li{
 .content-columns .colunas p{
     position: absolute;
     top: 50%;
-    left: auto;
+    left: 69%;
     transform: translate(-50%, -50%);
     letter-spacing: normal;
 }
