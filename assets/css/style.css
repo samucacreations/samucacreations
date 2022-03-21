@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    user-select: none;
 }
 :root{
     --color-secundary: #fabd21;
@@ -14,6 +13,9 @@
     --back-white-light: rgba(255, 255, 255, 0.726);
     --cor-base: rgba(153, 153, 153, 0.048);
 
+}
+::selection{
+    background: rgba(250, 188, 33, 0.178);
 }
 p{
     font-size: 19px;
@@ -61,8 +63,6 @@ header{
     left: 0;
     z-index: 999;
     overflow: hidden;
-    backdrop-filter: blur(0.9em);
-    -webkit-backdrop-filter: blur(0.9em);
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
@@ -144,7 +144,7 @@ ul > li{
     margin-top: 10%;
 }
 /* sections */
-#works, #service-area, #skills-area, #about, #works{
+#works, #service-area, #skills-area, #about, #main{
     margin: 60px 0;
     padding: 30px 0px;
 } 
@@ -223,6 +223,10 @@ ul > li{
 .btn-animado a{
     position: relative;
     z-index: 2;
+}
+.btn-links-project{
+    font-size: 16px;
+    margin: 35px 0;
 }
 .content-columns{
     display: flex;
@@ -316,7 +320,7 @@ ul > li{
     flex-flow: wrap row;
 }
 .project-body, .box-service{
-    width: 320px;
+    width: 364px;
     height: 250px;
     margin: 10px;
     padding: 70px 20px;
@@ -327,7 +331,8 @@ ul > li{
     flex-direction: column;
 }
 .title-project{
-    font-size: 18px;
+    text-align: start;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .btn-links-project{
@@ -418,7 +423,7 @@ footer .rodape-layout{
     align-items: center;
     justify-content: space-between;
 }
-@media only screen and (max-width: 885px){
+@media screen and (max-width: 992px){
     main{
         padding: 30px;
     }
@@ -508,9 +513,11 @@ footer .rodape-layout{
         width: 320px;
         margin-right: 0px;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: row;
+    }
+    .project-body{
+        display: flex;
+        flex-direction: column;
     }
     footer .rodape-layout{
         display: flex;
@@ -518,7 +525,7 @@ footer .rodape-layout{
         flex-direction: column;
     }
 }
-@media (max-width: 726px){
+@media screen and (max-width: 726px){
     main{
         padding: 0;
     }
@@ -613,6 +620,10 @@ footer .rodape-layout{
     }
     .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body{
         width: 450px;
+    }
+    .project-body{
+        display: flex;
+        flex-direction: column;
     }
     .profile-foto{
         width: 200px;
@@ -626,7 +637,7 @@ footer .rodape-layout{
         flex-direction: column-reverse;
     }
 }
-@media (max-width: 526px){
+@media  screen and (max-width: 526px){
     main{
         padding: 0;
     }
@@ -721,6 +732,10 @@ footer .rodape-layout{
     }
     .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body{
         width: 450px;
+    }
+    .project-body{
+        display: flex;
+        flex-direction: column;
     }
     .profile-foto{
         width: 200px;
