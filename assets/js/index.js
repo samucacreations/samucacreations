@@ -20,6 +20,15 @@ btnMobile.addEventListener('click', () => {
    }
 });
 
-scrollBtn.addEventListener('click', () => {
-    window.scroll({ top: 0, behavior: 'smooth'})
+$(document).ready(function () {
+  $("a").click(function () {
+    if ($(this).hasClass("same-box")) {
+      $(".toggle:visible").slideUp();
+      $($(this).attr("href")).slideDown();
+      return false;
+    }
+    var myelement = $(this).attr("href");
+    $(myelement).slideToggle("fast");
+    $(".toggle:visible").not(myelement).slideUp();
+  });
 });

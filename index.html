@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgb(23, 23, 23)">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+     <!--Boostrap link css-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="shortcut icon" href="assets/img/samuel.ico" type="image/x-icon">
     <title>Samuel Nicolau | Desenvolvedor Front End</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Fonte Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <!--link collapse-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -83,6 +87,21 @@
                 </div>
             </div>
         </section>
+        <section id="about">
+            <div class="col-12">
+                <h1 class="main-title">Quem é Samuel <span>.</span></h1>
+            </div>
+            <div class="content-columns">
+                <article class="colunas">
+                    <p>
+                        Samuel ou "NICODE-SN" é um estudante de Tecnologias e inovações, todo o seu interesse por esta área deve se pelo fato de gostar de expressar as suas ideias por intermédio da tecnologia que é o melhor meio para ele expressar os seus sentimentos e compartilhar com o mundo.
+                    </p>
+                </article>
+                <div class="colunas">
+                    <img class="img-user" src="assets/img/goku.png" alt="samuel nicolau" title="Samuel Nicolau">
+                </div>
+            </div>
+        </section>
         <!--Conhecimentos-->
         <section id="skills-area">
             <div class="col-12">
@@ -90,19 +109,43 @@
             </div>
             <div class="skills-content">
                 <div class="box-skills">
-                    <button class="btn-skills active"><a href="#">HTML</a></button>
-                    <button class="btn-skills"><a href="#">CSS</a></button>
-                    <button class="btn-skills"><a href="#">JavaScript</a></button>
-                    <button class="btn-skills"><a href="#">bootstrap</a></button>
+                    <button class="btn-skills active"><a href="#boxhtml">HTML</a></button>
+                    <button class="btn-skills"><a href="#boxcss">CSS</a></button>
+                    <button class="btn-skills"><a href="#boxjs">JavaScript</a></button>
+                    <button class="btn-skills"><a href="#boxbs">bootstrap</a></button>
                 </div>
-               <div class="inform-skill">
-                   <h6>HyperText Markup Language</h6>
-                   <span>Tim Berners-Lee - 1991</span> 
-                    <p class="describe-info">
-                        HTML é a liguagem base da internet para desenvolvimento de sites. 
-                        Foi criada para ser de fácil entendimento por seres humanos e também por máquinas, como por exemplo o Google ou outros sistemas que percorrem a internet capturando informações. 
-                    </p>
-               </div>
+                <div class="inform-skill same-box-1 toggle" id="boxhtml">
+                    <h6>HyperText Markup Language</h6>
+                    <span>Tim Berners-Lee - 1991</span> 
+                     <p class="describe-info">
+                         HTML é a liguagem base da internet para desenvolvimento de sites. 
+                         Foi criada para ser de fácil entendimento por seres humanos e também por máquinas, como por exemplo o Google ou outros sistemas que percorrem a internet capturando informações. 
+                     </p>
+                </div>
+                <div class="inform-skill same-box-1 toggle" id="boxcss">
+                    <h6>BOOSTRAP</h6>
+                    <span>Tim Berners-Lee - 1991</span> 
+                     <p class="describe-info">
+                         HTML é a liguagem base da internet para desenvolvimento de sites. 
+                         Foi criada para ser de fácil entendimento por seres humanos e também por máquinas, como por exemplo o Google ou outros sistemas que percorrem a internet capturando informações. 
+                     </p>
+                </div>
+                <div class="inform-skill same-box-1 toggle" id="boxjs">
+                    <h6>CSS</h6>
+                    <span>Tim Berners-Lee - 1991</span> 
+                     <p class="describe-info">
+                         HTML é a liguagem base da internet para desenvolvimento de sites. 
+                         Foi criada para ser de fácil entendimento por seres humanos e também por máquinas, como por exemplo o Google ou outros sistemas que percorrem a internet capturando informações. 
+                     </p>
+                </div>
+                <div class="inform-skill same-box-1 toggle" id="boxbs">
+                    <h6>JS</h6>
+                    <span>Tim Berners-Lee - 1991</span> 
+                     <p class="describe-info">
+                         HTML é a liguagem base da internet para desenvolvimento de sites. 
+                         Foi criada para ser de fácil entendimento por seres humanos e também por máquinas, como por exemplo o Google ou outros sistemas que percorrem a internet capturando informações. 
+                     </p>
+                </div>
             </div>
         </section>
         <!--Serviços-->
@@ -112,13 +155,22 @@
             </div>
             <div class="containerMax">
                 <div class="box-service">
-                    <img src="vendor/service-img/site.svg" alt="custom site">
+                    <ion-icon name="laptop-outline"></ion-icon>
+
+                    <h4>Desenvolvimento</h4>
+                    <p>Desenvolvo de sites profissionais, blogs, portfólios, landing pages e e-commerce.</p>
                 </div>
                 <div class="box-service">
-                    
+                    <ion-icon name="color-palette-outline"></ion-icon>
+                    <h4>Animação</h4>
+                    <P>Crio interações, projetando melhores experiências digitais, para seus clientes.</P>
                 </div>
                 <div class="box-service">
-    
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                    <h4>Desgner</h4>
+                    <p>
+                        Desenho interface de forma que ela seja clara, objetiva e principalmente intuitiva para o usuário.
+                    </p>
                 </div>
             </div>
         </section>

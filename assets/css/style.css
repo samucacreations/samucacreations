@@ -11,7 +11,7 @@
     --text-color-light: rgb(216, 216, 216);
     --back-yellow-light: rgba(250, 188, 33, 0.562);
     --back-white-light: rgba(255, 255, 255, 0.726);
-    --cor-base: rgba(153, 153, 153, 0.048);
+    --cor-base: rgba(153, 153, 153, 0.047);
 
 }
 ::selection{
@@ -237,24 +237,10 @@ ul > li{
 }
 .content-columns .colunas{
     width: 600px;
-    position: relative;
 }
 .content-columns .colunas p{
     padding: 20px;
-    position: absolute;
     margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-.content-columns .colunas:nth-child(1){
-    width: 600px;
-    height: 300px;
-    -webkit-box-shadow: inset 4px 4px 13px 8px #00000031; 
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.336);
-    border-radius: 10px;
-    background: var(--cor-base);
 }
 .img-user{
     width: 300px;
@@ -295,6 +281,11 @@ ul > li{
     margin: 0px 15px;
     border-left: 3px solid #fabc2111;
 }
+/* esconder o conteúdo */
+.toggle{ display: none; } 
+
+.inform-skill{ display: none; }
+
 .btn-skills{
     color: var(--text-color);
     font-size: 14px;
@@ -334,12 +325,21 @@ ul > li{
     width: 364px;
     height: 250px;
     margin: 10px;
-    padding: 70px 20px;
+    padding: 20px;
     border-radius: 5px;
     flex-basis: calc(33% -20px);
     background: var(--cor-base);
     display: flex;
     flex-direction: column;
+}
+.box-service ion-icon{
+    color: #fabd21;
+    font-size: 40px;
+    text-align: start;
+    margin-bottom: 40px;   
+}
+.box-service p{
+    padding-top: 2px;
 }
 .title-project{
     text-align: start;
