@@ -291,6 +291,10 @@ ul > li{
     width: 100%;
     margin: 60px auto;
     padding: 25px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 5px;
     background: var(--cor-base);
     box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
@@ -310,7 +314,7 @@ ul > li{
 .wrapper nav label{
     display: block;
     height: 100%;
-    width: 100%;
+    width: 80px;
     text-align: center;
     line-height: 70px;
     cursor: pointer;
@@ -318,18 +322,19 @@ ul > li{
     z-index: 1;
     color: var(--text-color-light);
     font-size: 17px;
-    border-radius: 5px;
     margin: 0 5px;
     transition: all 0.3s ease;
 }
 .wrapper nav label:hover{
-    background: rgba(250, 188, 33, 0.267);
+    color: rgba(250, 188, 33, 0.267);
+}
+.wrapper nav .btn-bs{
+    margin-left: 25px;
 }
 #btn-html:checked ~ nav label.home,
 #btn-css:checked ~ nav label.blog,
 #btn-js:checked ~ nav label.btn-js,
-#btn-bs:checked ~ nav label.btn-bs,
-#btn-node:checked ~ nav label.btn-node{
+#btn-bs:checked ~ nav label.btn-bs{
     color: #fff;
 }
 nav label ion-icon{
@@ -340,8 +345,8 @@ nav label ion-icon{
 nav .slider{
     position: absolute;
     height: 100%;
-    width: 20%;
-    left: 0;
+    width: 10%;
+    left: 3%;
     bottom: 0;
     z-index: 0;
     border-bottom: 2px solid #fabd21;
@@ -351,7 +356,7 @@ input[type="radio"]{
     display: none;
 }
 #btn-css:checked ~ nav .slider{
-    left: 20%;
+    left: 21%;
 }
 #btn-js:checked ~ nav .slider{
     left: 40%;
@@ -359,25 +364,17 @@ input[type="radio"]{
 #btn-bs:checked ~ nav .slider{
     left: 60%;
 }
-#btn-node:checked ~ nav .slider{
-    left: 80%;
-}
 article .content{
     display: none;
 }
 #btn-html:checked ~ article .content-1,
 #btn-css:checked ~ article .content-2,
 #btn-js:checked ~ article .content-3,
-#btn-bs:checked ~ article .content-4,
-#btn-node:checked ~ article .content-5{
+#btn-bs:checked ~ article .content-4{
     display: block;
+    margin: 20px 0 0 0;
 }
-article .content .title{
-    font-size: 21px;
-    font-weight: 500;
-    margin: 30px 0 10px 0;
-}
-article .content p{
+article .content a{
     text-align: justify;
 }
 /* ------------------------*/
@@ -768,7 +765,7 @@ footer .rodape-layout{
         justify-content: center;
         flex-direction: column;
     }
-    .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body{
+    .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body, .wrapper{
         width: 450px;
     }
     .skills-content{
@@ -779,13 +776,33 @@ footer .rodape-layout{
         display: flex;
         flex-direction: row;
     }
-    .project-body{
+    .project-body, .box-service{
         display: flex;
         flex-direction: column;
+    }
+    /* ativo skill */
+    #btn-css:checked ~ nav .slider{
+        left: 24%;
+    }
+    #btn-js:checked ~ nav .slider{
+        left: 48%;
+    }
+    #btn-bs:checked ~ nav .slider{
+        left: 82%;
+    }
+    nav .slider{
+        left: 5%;
     }
     .profile-foto{
         width: 200px;
         height: 200px;
+    }
+    /* slider service */
+    nav label{
+        margin-left: 90px;
+    }
+    .myemail{
+        display: none;
     }
     footer .rodape-layout{
         font-size: 14pt;
@@ -888,7 +905,7 @@ footer .rodape-layout{
         justify-content: center;
         flex-direction: column;
     }
-    .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body{
+    .content-columns .colunas:nth-child(1), .containerMax .box-service, .project-body, .wrapper{
         width: 450px;
     }
     .skills-content{
@@ -900,13 +917,20 @@ footer .rodape-layout{
         display: flex;
         flex-direction: row;
     }
-    .project-body{
+    .project-body, .box-service{
         display: flex;
         flex-direction: column;
     }
     .profile-foto{
         width: 200px;
         height: 200px;
+    }
+    /* slider service */
+    nav label{
+        margin-left: 90px;
+    }
+    .myemail{
+        display: none;
     }
     footer .rodape-layout{
         font-size: 14pt;
