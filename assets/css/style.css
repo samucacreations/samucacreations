@@ -144,13 +144,11 @@ ul > li{
         background-position: 2000px 0;
     }
 }
-#main{
-    margin-top: 10%;
-}
+
 /* sections */
-#works, #service-area, #skills-area, #about, #main, #contact-area{
-    margin: 70px 0;
-    padding: 35px 0px;
+#works, #service-area, #skills-area, #about, #main, #contact-area, #sota-area{
+    margin: 60px 0;
+    padding: 96px 0px;
 } 
 .about-me{
     width: 600px;
@@ -346,7 +344,7 @@ nav .slider{
     position: absolute;
     height: 100%;
     width: 10%;
-    left: 3%;
+    left: 4%;
     bottom: 0;
     z-index: 0;
     border-bottom: 2px solid #fabd21;
@@ -515,6 +513,18 @@ article .content a{
         transform: scale(.4);
     }
 }
+#contact-area{
+    width: 100%;
+    height: 70vh;
+    padding-bottom: 60px;
+}
+#contact-area p{
+    max-width: 80%;
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* email area */
 
 .myemail{
@@ -532,22 +542,59 @@ article .content a{
 }
 .myemail a:hover{
     color: #fabc21b6;
-    transition: 0.30s ease;
+    transition: 0.60s;
 }
 /* rodapé */
 footer{
-    margin-top: 90px;
-    padding: 60px 0 30px 0;
+    margin-top: 60px;
+    padding: 96px 0 30px 0;
 }
 footer p{
     text-align: center;
     font-family: 'Fira Code', monospace;
     font-size: 14px;
 }
+footer .nav-list-social{
+    display: none;
+}
 footer .rodape-layout{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+/* SOTA - Armazem */
+#sota-area{
+    padding: 0 20px;
+}
+#sota-area table{
+    text-align: start;
+    width: 100% !important;
+    margin-bottom: 1rem;
+}
+#sota-area table{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-indent: initial;
+}
+th, td{
+    width: auto;
+    padding: 12px;
+}
+table tr th{
+    color: var(--text-color-light);
+    font-weight: 300;
+}
+table tr td:first-child{
+    color: #fabd21;
+}
+table tr td:nth-child(5){
+    font-size: 20px;
+    margin: 5px;
+}
+tbody td ion-icon:hover{
+    color: #fabd21;
+    transition: 0.60s;
 }
 @media screen and (max-width: 992px){
     main{
@@ -705,6 +752,9 @@ footer .rodape-layout{
     .nav-ol-list li{
         margin: 15px 0;
     }
+    .nav-list .nav-list-social{
+        display: none;
+    }
     .btn-mobile{
         display: block;
         position: absolute;
@@ -810,6 +860,12 @@ footer .rodape-layout{
         align-items: center;
         justify-content: space-between;
         flex-direction: column-reverse;
+    }
+    footer .nav-list-social{
+        display: flex;
+    }
+    footer .nav-list-social li{
+        margin-right: 35px;
     }
 }
 @media  screen and (max-width: 526px){
@@ -938,5 +994,11 @@ footer .rodape-layout{
         align-items: center;
         justify-content: space-between;
         flex-direction: column-reverse;
+    }
+    footer .nav-list-social{
+        display: flex;
+    }
+    footer .nav-list-social li{
+        margin-right: 35px;
     }
 }
