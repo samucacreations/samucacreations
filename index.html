@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Fonte Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!--link collapse-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/aa9ee0dfae.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -23,9 +23,9 @@
         <nav>
             <div id="menu-toggle" class="nav-list" data-visible="false">
                 <ol class="nav-ol-list">
-                    <li><a href="#about" aria-hidden="true">Sobre</a></li>
-                    <li><a href="#service" aria-hidden="true">Projetos</a></li>
-                    <li><a href="#portfolio" aria-hidden="true">Portfólio</a></li>
+                    <li><a href="index.html" aria-hidden="true">Sobre</a></li>
+                    <li><a href="assets/service/service.html" aria-hidden="true">Serviços</a></li>
+                    <li><a href="assets/portfolio/portfolio.html" aria-hidden="true">Portfólio</a></li>
                     <li><a href="#contact" aria-hidden="true">Contatos</a></li>
                 </ol>
                 <ul class="nav-list-social">
@@ -59,27 +59,28 @@
     </header>
     <main>
         <section id="main">
-            <div class="main-coluna">
-                <div class="content-about">
-                    <div class="coluna">
-                        <p class="text-blur-out">Oi, meu nome é</p>
-                        <h2 class="big-heading text-chegando">Samuel  Nicolau.</h2>
-                        <h2 class="sub-heading">Front-End Developer.</h2>
-                        <p>
-                            Sou um engenheiro de software especializado em dar vida às ideais na internet e projetando melhores experiências digitais.Atualmente, estou focado na construção de sites.
-                        </p>
-                        <br>
-                        <div class="btn-animado">
-                            <a href="#">Resumo</a>
-                        </div>
+            <div class="containerMax">
+                <div class="box-coluna">
+                    <p class="text-blur-out">Oi, meu nome é</p>
+                    <h2 class="big-heading text-chegando">Samuel  Nicolau<span>.</span></h2>
+                    <h2 class="sub-heading">Front-End Developer<span>.</span></h2>
+                    <p>
+                        Sou um engenheiro de software especializado <br> em dar vida às ideais na internet e projetando <br> melhores experiências digitais. Atualmente estou focado na construção de sites.
+                    </p>
+                    <br>
+                    <div class="btn-animado">
+                        <a href="#">Resumo</a>
                     </div>
                 </div>
-                <div class="coluna profile-foto">
-                    <img class="img-user" src="assets/img/heidy.png" alt="">
+                <div class="box-coluna">
+                    <h1 class="main-title">Quem é Samuel <span>.</span></h1>
+                    <p>
+                        Samuel é um Freelancer Front-End Developer, comecei na carreira de desenvolvedor web no ano de 2021 venho desenvolvendo as minhas habilidades nos aprendizados adquirido dia após dia. Com os meus olhares aguçados venho treinando também sobre design para envolver completamente o usuário no mundo digital.
+                    </p>
                 </div>
             </div>
         </section>
-        <section id="about">
+        <!--<section id="about">
             <h1 class="main-title">Quem é Samuel <span>.</span></h1>
             <div class="main-coluna">
                 <div class="coluna content-about">
@@ -91,75 +92,56 @@
                     <img class="img-user" src="assets/img/heidy.png" alt="samuel nicolau" title="Samuel Nicolau">
                 </div>
             </div>
-        </section>
-        <!--Conhecimentos-->
-        <section id="skills-area">
-            <h1 class="main-title">Conhecimentos<span>.</span></h1>
-            <div class="wrapper">
-                <span class="Esfera"></span>
-            </div>
-        </section>
+        </section> -->
         <!--Serviços-->
         <section id="service-area">
             <div class="containerMax">
                 <h1 class="main-title">Serviços <span>.</span></h1>
                 <div class="box-service">
-                    <ion-icon name="laptop-outline"></ion-icon>
-                    <h4>Desenvolvimento</h4>
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/anihkfxp.json"
+                            trigger="loop"
+                            colors="primary:#e4e4e4,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <h1 class="title-project">Desenvolvimento</h1>
+                    </div>
                     <p>Desenvolvo de sites profissionais, blogs, portfólios, landing pages e e-commerce.</p>
                 </div>
                 <div class="box-service">
-                    <ion-icon name="color-palette-outline"></ion-icon>
-                    <h4>Animação</h4>
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/jvucoldz.json"
+                            trigger="loop"
+                            colors="primary:#fabd21,secondary:#e4e4e4"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <h1 class="title-project">Animação</h1>
+                    </div>
                     <P>Crio interações, projetando melhores experiências digitais, para seus clientes.</P>
                 </div>
                 <div class="box-service">
-                    <ion-icon name="sparkles-outline"></ion-icon>
-                    <h4>Desgner</h4>
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/wloilxuq.json"
+                            trigger="loop"
+                            colors="primary:#e4e4e4,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <h1 class="title-project">Desgner</h1>
+                    </div>
                     <p>
                         Desenho interface de forma que ela seja clara, objetiva e principalmente intuitiva para o usuário.
                     </p>
                 </div>
             </div>
         </section>
-        <!--projetos-->
-        <section id="works">
-            <h1 class="main-title">Projetos<span>.</span></h1>
-            <div class="btn-links-project arquivo">
-                <div class="btn-animado">
-                    <a href="sotao/sota.html">Sótão</a>
-                </div>
-            </div>
-            <div class="containerMax">
-                <article class="project-body">
-                    <h3 class="title-project">
-                        Brevemente Disponivel 
-                    </h3>
-                    <p>
-                        Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
-                    </p>
-                </article>
-                <article class="project-body">
-                    <h3 class="title-project">
-                        Brevemente Disponivel 
-                    </h3>
-                    <p>
-                        Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
-                    </p>
-                </article>
-                <article class="project-body">
-                    <h3 class="title-project">
-                        Brevemente Disponivel 
-                    </h3>
-                    <p>
-                        Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
-                    </p>
-                </article>
-            </div>
-            <div class="btn-links-project arquivo">
-                <div class="btn-animado">
-                    <a href="#">Repositório no Github</a>
-                </div>
+        <!--Conhecimentos-->
+        <section id="skills-area">
+            <h1 class="main-title">Conhecimentos<span>.</span></h1>
+            <div class="wrapper">
+                <span class="auto-type"></span>
             </div>
         </section>
         <!--contato-->
@@ -175,7 +157,7 @@
             <div class="btn-links-project arquivo">
                 <div class="btn-animado">
                     <a href="mailto:muambalas@gmail.com">
-                        Diga Olá
+                        Diga Olá!
                     </a>
                 </div>
             </div>
@@ -218,45 +200,16 @@
             </div>
         </footer>
     </main>
-    <div class="cursor"></div>
     <script src="assets/js/index.js"></script>
-    <!-- Incluindo a CDN do script TagCloud.js no documento -->
-    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
-    <!--Criar uma esfera de texto rotativa 3D-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
     <script>
-        const Texto = [
-            'HTML', 'CSS', 'JAVASCRIPT',
-            'Loading', 'Loading', 'Loading',
-            'PYTHON', 'Loading',
-            'Loading', 'BOOSTRAP', 'Loading',
-            'Loading', 'Loading', 'Loading', 'Loading'
-        ];
-
-        var tagCloud = TagCloud('.Esfera', Texto, {
-
-            // Raio da esfera em px
-            radius: 220, 
-
-            // velocidade da animação
-            // Lento, Normal, Rápido
-            maxSpeed: 'normal',
-            initSpeed: 'fast',
-
-            // Direção da rotaçaõ topo 0, esquerda 90, direita baixo 135
-            direction: 135,
-
-            // interação com o mouse ou não por padrão é verdadeiro, desacelerar para a velocidade inicial, e continuar a rolar com o mouse
-            keep: true
-
-        });
-
-        var color = '#fabd21';
-        document.querySelector('.Esfera').style.color = color;
+        var typed = new Typed(".auto-type", {
+            strings: ["HTML", "css", "javascript", "python", "git", "github"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
     </script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/aa9ee0dfae.js" crossorigin="anonymous"></script>
-    <!--Ion-icons-->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
