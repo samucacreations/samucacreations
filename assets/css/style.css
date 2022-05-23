@@ -19,8 +19,14 @@ html{
   --back-yellow-light: rgba(250, 188, 33, 0.562);
   --back-white-light: rgba(255, 255, 255, 0.726);
   --cor-base: rgba(153, 153, 153, 0.047);
-  --heading-font: 5rem;
-  --text-letter-font: 1.2rem;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
 }
 ::selection {
   background: rgba(250, 188, 33, 0.178);
@@ -68,7 +74,7 @@ header {
   justify-content: space-between;
   width: 100%;
   position: fixed;
-  padding: 15px 0;
+  padding: 10px 0;
   top: 0;
   left: 0;
   z-index: 999;
@@ -194,22 +200,27 @@ ul > li {
 }
 /* about-area*/
 .containerMax {
+  width: 100%;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: wrap row;
+  padding: 0 30px;
+}
+#works .containerMax,
+#sota-area .containerMax{
+  height: 45vh;
+}
+#sota-area .main-title{
+  margin-top: 6%;
 }
 #main .containerMax{
-  width: 100%;
-  height: 95vh;
-  min-height: 500px;
   background: url("../img/nicode.png") no-repeat bottom;
   background-size: 500px;
   background-attachment: fixed;
-  box-shadow: 4px 2px 4px var(--cor-base);
 }
 #main .containerMax .box-coluna{
-  width: 600px;
+  width: 550px;
   height: 400px;
   padding-top: 10%;
 }
@@ -225,19 +236,11 @@ ul > li {
   float: right;
   text-align: start;
 }
-.main-coluna{
-  padding: 0 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 600px;
+#main .containerMax .box-coluna:nth-child(2){
+  display: none;
 }
-.main-coluna .content-about{
-  flex-grow: 2;
-  padding: 10px;
-}
-.main-coluna .profile-foto{
-  flex-grow: 1;
+#main .containerMax .box-coluna img{
+  display: none;
 }
 #about .content-about{
   order: 2;
@@ -251,6 +254,9 @@ ul > li {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.imagMobile{
+  display: none;
 }
 #main .profile-foto .img-user{
   animation: up-down 2s ease-in-out infinite alternate-reverse both; /* efeito cima baixo */
@@ -355,17 +361,6 @@ ul > li {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
 }
-.content-columns {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-}
-.content-columns .coluna p {
-  padding: 10px;
-  margin: 0;
-  line-height: 30px;
-}
 /* Conhecimentos */
 .skills-content {
   display: flex;
@@ -387,8 +382,6 @@ ul > li {
   margin: 0px 15px;
   border-left: 3px solid #fabc2111;
 }
-/* Esfera estilização */
-
 .tagCloud{
   display: inline-block;
   top: 100px;
@@ -459,7 +452,8 @@ ul > li {
   text-align: start;
   font-size: 18px;
   letter-spacing: -1px;
-  width: 336px;
+  max-width: 338px;
+  min-height: 250px;
   height: 270px;
   margin: 10px;
   padding: 0 20px;
@@ -484,6 +478,9 @@ ul > li {
 .head-box .title-project{
   float: right;
   line-height: 85px;
+}
+.project-body .head-box{
+  text-align: center;
 }
 .box-service:hover{
   transform: scale(1.05);
@@ -708,11 +705,77 @@ tbody td ion-icon:hover {
     width: 40px;
     transform: rotate(-495deg);
   }
-  .big-heading {
-    font-size: 20px;
+  #main .containerMax{
+    background:none;
   }
-  #main {
-    margin-top: 30%;
+  #main .containerMax{
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+      "box1 box1 box1"
+      "box3 box3 box2"
+    ;
+  }
+  #main .containerMax .box-coluna,
+  #service-area .containerMax .project-body{
+    max-width: 320px;
+    min-width: 220px;
+    height: 400px;
+    padding-top: 10%;
+  }
+  #main .box-coluna:nth-child(1){
+    grid-area: box1;
+  }
+  #main .containerMax .box-coluna .main-title {
+    text-align: start;
+  }
+  #main .containerMax .box-coluna p:nth-child(2) {
+    width: auto;
+    float: left;
+    text-align: start;
+  }
+  #main .box-coluna .big-heading{
+    font-size: 60px;
+  }
+  #main .box-coluna .sub-heading{
+    font-size: 40px;
+  }
+  #main .box-coluna:nth-child(2){
+    grid-area: box2;
+  }
+  #main .box-coluna:nth-child(3){
+    grid-area: box3;
+  }
+  #main .containerMax .box-coluna:nth-child(2){
+  display: none;
+}
+  #main .containerMax .box-coluna img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+  }
+  #works .main-title{
+    padding-top: 10%;
+  }
+  .containerMax
+  {
+    flex-wrap: wrap;
+  }
+  #skills-area{
+    padding-top: 30px;
+    position: relative;
+    height: 40vh;
+  }
+  .wrapper{
+    font-size: 40px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .box-skills {
     padding: 0 25px;
@@ -739,21 +802,24 @@ tbody td ion-icon:hover {
     display: flex;
     flex-direction: column;
   }
+  .btn-links-project{
+    margin: 55px 0;
+  }
+  #sota-area .main-title{
+    margin-top: 25%;
+  }
   footer .rodape-layout {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 }
-@media (max-width:690){
-  .max-width{
-    padding: 0 23px;
-  }
-  
-}
 @media (max-width: 568px) {
   body{
-    font-size: 0.99em;
+    font-size: 1em;
+  }
+  p{
+    font-size: var(--fz-md);
   }
   main {
     width: 100%;
@@ -777,17 +843,57 @@ tbody td ion-icon:hover {
     margin-bottom: 40%;
     height: auto;
   }
-  .about-coluna{
-    display: flex;
-    align-items: center;
+  #main .containerMax{
+    max-width: 1200px;
+    margin: 45px auto;
+    height: 100vh;
+    display: grid;
     justify-content: center;
-    flex-direction: column;
+    grid-template-areas: 
+      "box1 box1 box1"
+      "box3 box3 box3"
+    ;
   }
-  .content-columns {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  #main .box-coluna:nth-child(2){
+    display: none;
+  }
+  #main .box-coluna .big-heading{
+    font-size: 40px;
+  }
+  #main .box-coluna .sub-heading{
+    font-size: 25px;
+  }
+  #main .box-coluna p br{
+    display: none;
+  }
+  .imagMobile{
+    position: relative;
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    height: 358px;
+    background-color: #999;
+    transition: 0.8s;
+  }
+  .imagMobile img{
+    width: inherit;
+    height: inherit;
+  }
+  .imagMobile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, #fabc21, #fabc21a1);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+  }
+  .boxImag:hover .imagMobile::before{
+    opacity: 1;
   }
   #works,
   #service-area,
@@ -795,27 +901,10 @@ tbody td ion-icon:hover {
   #main,
   #contact-area,
   #sota-area{
-    padding: 0 15px;
-  }
-  #skills-area{
-    padding-top: 30px;
-  }
-  .wrapper{
-    font-size: 40px;
+    padding: 0 10px;
   }
   #contact-area{
     height: auto;
-  }
-  #main .containerMax{
-    width: 100%;
-    height: auto;
-    background: none;
-  }
-  #main .containerMax .box-coluna{
-    width: 480px;
-    height: auto;
-    padding: 0 20px;
-    margin: 10px 0;
   }
   #main .containerMax .box-coluna p{
     width: auto;
@@ -826,14 +915,6 @@ tbody td ion-icon:hover {
   #main .containerMax .box-coluna p:nth-child(2){
     float: none;
     text-align: start;
-  }
-  .content-columns .coluna:nth-child(1),
-  .containerMax .box-service,
-  .project-body, 
-  .coluna,
-  .wrapper,
-  .max-width{
-    width: 460px;
   }
   .main-coluna, 
   .skills-content,
