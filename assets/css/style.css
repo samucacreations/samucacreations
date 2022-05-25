@@ -199,15 +199,28 @@ ul > li {
   padding: 96px 30px;
 }
 /* about-area*/
-.containerMax {
-  width: 100%;
+#main .containerMax {
   height: 95vh;
+}
+.containerMax {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 30px;
 }
-#works .containerMax,
+#service-area .containerMax,
+#works .containerMax{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#service-area .box-service,
+#works .project-body{
+  flex: 1 1 325px;
+}
 #sota-area .containerMax{
   height: 45vh;
 }
@@ -452,7 +465,6 @@ ul > li {
   text-align: start;
   font-size: 18px;
   letter-spacing: -1px;
-  max-width: 338px;
   min-height: 250px;
   height: 270px;
   margin: 10px;
@@ -464,20 +476,17 @@ ul > li {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .box-service,
 .project-body{
   transition: all 0.3s ease;
 }
 .head-box{
-  padding: 0 20px;
   width: 100%;
-  position: relative;
   user-select: none;
 }
 .head-box .title-project{
-  float: right;
-  line-height: 85px;
 }
 .project-body .head-box{
   text-align: center;
@@ -490,10 +499,6 @@ ul > li {
   font-size: 2.5em;
   text-align: start;
   margin-bottom: 40px;
-}
-.box-service p {
-  padding-top: 2px;
-  margin: 0;
 }
 .title-project {
   text-align: start;
@@ -508,11 +513,12 @@ ul > li {
 }
 /*contato */
 #contact-area {
-  width: 70%;
-  height: 260px;
+  width: 100%;
+  height: 330px;
   text-align: center;
   margin: 45px auto;
   position: relative;
+  padding-bottom: 60px;
 }
 #contact-area > .container {
   display: flex;
@@ -521,11 +527,6 @@ ul > li {
   flex-direction: column;
   position: absolute;
   top: 10%;
-}
-#contact-area {
-  width: 100%;
-  height: 70vh;
-  padding-bottom: 60px;
 }
 #contact-area p {
   max-width: 80%;
@@ -705,29 +706,21 @@ tbody td ion-icon:hover {
     width: 40px;
     transform: rotate(-495deg);
   }
+  .main-title{
+    text-align: center;
+  }
   #main .containerMax{
+    height: auto;
     background:none;
   }
   #main .containerMax{
-    max-width: 100%;
-    margin: 0 auto;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    grid-template-areas: 
-      "box1 box1 box1"
-      "box3 box3 box2"
-    ;
+    padding: 50px 0 45px 0;
+    flex-direction: column;
+    border: 1px solid red;
   }
-  #main .containerMax .box-coluna,
-  #service-area .containerMax .project-body{
-    max-width: 320px;
-    min-width: 220px;
-    height: 400px;
-    padding-top: 10%;
-  }
-  #main .box-coluna:nth-child(1){
-    grid-area: box1;
+  #main .containerMax .box-coluna{
+    width: 95%;
+    height: auto;
   }
   #main .containerMax .box-coluna .main-title {
     text-align: start;
@@ -743,15 +736,6 @@ tbody td ion-icon:hover {
   #main .box-coluna .sub-heading{
     font-size: 40px;
   }
-  #main .box-coluna:nth-child(2){
-    grid-area: box2;
-  }
-  #main .box-coluna:nth-child(3){
-    grid-area: box3;
-  }
-  #main .containerMax .box-coluna:nth-child(2){
-  display: none;
-}
   #main .containerMax .box-coluna img{
     display: block;
     margin-left: auto;
@@ -763,7 +747,7 @@ tbody td ion-icon:hover {
   }
   .containerMax
   {
-    flex-wrap: wrap;
+    height: 100%;
   }
   #skills-area{
     padding-top: 30px;
@@ -798,15 +782,14 @@ tbody td ion-icon:hover {
     display: flex;
     flex-direction: row;
   }
-  .project-body {
-    display: flex;
-    flex-direction: column;
-  }
   .btn-links-project{
     margin: 55px 0;
   }
   #sota-area .main-title{
     margin-top: 25%;
+  }
+  #sota-area .main-title p{
+    padding: 30px 0 0 0;
   }
   footer .rodape-layout {
     display: flex;
@@ -832,9 +815,6 @@ tbody td ion-icon:hover {
   .big-heading {
     font-size: 20px;
   }
-  .main-title{
-    text-align: center;
-  }
   #main {
     display: flex;
     align-items: center;
@@ -842,17 +822,6 @@ tbody td ion-icon:hover {
     flex-direction: column;
     margin-bottom: 40%;
     height: auto;
-  }
-  #main .containerMax{
-    max-width: 1200px;
-    margin: 45px auto;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    grid-template-areas: 
-      "box1 box1 box1"
-      "box3 box3 box3"
-    ;
   }
   #main .box-coluna:nth-child(2){
     display: none;
@@ -871,7 +840,7 @@ tbody td ion-icon:hover {
     margin-top: 60px;
     display: block;
     width: 100%;
-    height: 358px;
+    height: 250px;
     background-color: #999;
     transition: 0.8s;
   }
@@ -903,22 +872,20 @@ tbody td ion-icon:hover {
   #sota-area{
     padding: 0 10px;
   }
+  .containerMax{
+    padding: 0;
+  }
   #contact-area{
     height: auto;
   }
   #main .containerMax .box-coluna p{
     width: auto;
   }
-  #main .containerMax .box-coluna .main-title{
-    text-align: center;
-  }
   #main .containerMax .box-coluna p:nth-child(2){
     float: none;
     text-align: start;
-  }
-  .main-coluna, 
-  .skills-content,
-  #main .max-width {
+  } 
+  .skills-content{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -927,14 +894,6 @@ tbody td ion-icon:hover {
   .skills-content .box-skills {
     display: flex;
     flex-direction: row;
-  }
-  .title-project{
-    text-align: end;
-  }
-  .img-user{
-    width: 275px;
-    height: 275px;
-    display: none;
   }
   /* slider service */
   nav label {
