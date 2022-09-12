@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgb(23, 23, 23)">
 
-    <link rel="shortcut icon" href="assets/img/samuel.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/nicode.ico" type="image/x-icon">
     <title>Samuel Nicolau | Desenvolvedor Front End</title>
+
+    <!--CSS LINKS-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/svg.css">
+    <!-- link scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Fonte Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <!-- Font Awesome -->
@@ -23,10 +28,10 @@
         <nav>
             <div id="menu-toggle" class="nav-list" data-visible="false">
                 <ol class="nav-ol-list">
-                    <li><a href="index.html" aria-hidden="true">Sobre</a></li>
-                    <li><a href="assets/service/service.html" aria-hidden="true">Serviços</a></li>
-                    <li><a href="assets/portfolio/portfolio.html" aria-hidden="true">Portfólio</a></li>
-                    <li><a href="#contact" aria-hidden="true">Contatos</a></li>
+                    <li><a href="#main" aria-hidden="true" id="#main">Sobre</a></li>
+                    <li><a href="#service-area" aria-hidden="true">Serviços</a></li>
+                    <li><a href="#works" aria-hidden="true">Portfólio</a></li>
+                    <li><a href="#contact-area" aria-hidden="true">Contatos</a></li>
                 </ol>
                 <ul class="nav-list-social">
                     <li>
@@ -60,10 +65,10 @@
     <main>
         <section id="main">
             <div class="containerMax">
-                <div class="box-coluna">
+                <div class="container" data-aos="fade-up"
+                data-aos-duration="3000">
                     <p class="text-blur-out">Oi, meu nome é</p>
-                    <h2 class="big-heading text-chegando">Samuel  Nicolau<span>.</span></h2>
-                    <h2 class="sub-heading">Front-End Developer<span>.</span></h2>
+                    <h2 class="big-heading">Samuel  Nicolau<span>.</span></h2>
                     <p>
                         Sou um engenheiro de software especializado <br> em dar vida às ideais na internet e projetando <br> melhores experiências digitais. Atualmente estou focado na construção de sites.
                     </p>
@@ -72,40 +77,33 @@
                         <a href="#">Resumo</a>
                     </div>
                 </div>
-                <div class="box-coluna">
-                    <img src="assets/img/imagMobile.jpg" alt="Samuel Nicolau">
+                <!--Svg-->
+                <div class="container" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <img class="meAvatar" src="assets/img/heidy.png" alt="Samuel Nicolau">
                 </div>
-                <div class="box-coluna">
-                    <h1 class="main-title">Quem é Samuel <span>.</span></h1>
-                    <p>
-                        Samuel é um Freelancer Front-End Developer, comecei na carreira de desenvolvedor web no ano de 2021 venho desenvolvendo as minhas habilidades nos aprendizados adquirido dia após dia. Com os meus olhares aguçados venho treinando também sobre design para envolver completamente o usuário no mundo digital.
-                    </p>
-                </div>
-            </div>
-            <div class="boxImag">
-                <div class="imagMobile">
-                    <img src="assets/img/nicode.png">
+                <div class="container" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <h2 class="sub-heading">Front-End Developer UX Designer<span>.</span></h2>
+                    <div class="main-coluna">
+                        <div class="coluna content-about">
+                            <p>
+                                No mundo digital cada clique é fundamental para melhor interação do usuário, com isso procuro caprichar cada detalhe nos meus trabalhos.
+                            </p>
+                            <p>
+                                Quando não estou na frente de uma tela de computador, provavelmente estou na frente de uma tela de smartphone.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!--<section id="about">
-            <h1 class="main-title">Quem é Samuel <span>.</span></h1>
-            <div class="main-coluna">
-                <div class="coluna content-about">
-                    <p>
-                        Samuel ou Nicodesn como preferir é um Freelancer Front-End Developer, comecei na carreira de desenvolvedor web no ano de 2021, tão recente é? Mas venho preenchendo as lacunas das minhas habilidades nos aprendizados adquirido dia após dia. Com os meus olhares aguçados venho treinando também sobre design para envolver completamente o usuário no mundo digital.
-                    </p>
-                </div>
-                <div class="coluna profile-foto">
-                    <img class="img-user" src="assets/img/heidy.png" alt="samuel nicolau" title="Samuel Nicolau">
-                </div>
-            </div>
-        </section> -->
         <!--Serviços-->
         <section id="service-area">
             <h1 class="main-title">Serviços <span>.</span></h1>
             <div class="containerMax">
-                <div class="box-service">
+                <div class="box-service" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="head-box">
                         <lord-icon
                             src="https://cdn.lordicon.com/anihkfxp.json"
@@ -117,7 +115,8 @@
                     </div>
                     <p>Desenvolvimento de sites profissionais, blogs, portfólios, landing pages e e-commerce.</p>
                 </div>
-                <div class="box-service">
+                <div class="box-service" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="head-box">
                         <lord-icon
                             src="https://cdn.lordicon.com/jvucoldz.json"
@@ -129,7 +128,8 @@
                     </div>
                     <P>Crio interações, projetando melhores experiências digitais, para seus clientes.</P>
                 </div>
-                <div class="box-service">
+                <div class="box-service" data-aos="fade-up"
+                data-aos-duration="3000">
                     <div class="head-box">
                         <lord-icon
                             src="https://cdn.lordicon.com/wloilxuq.json"
@@ -152,21 +152,81 @@
                 <span class="auto-type"></span>
             </div>
         </section>
-        <!--contato-->
-        <section id="contact-area">
-            <div class="col-12">
-                <h1 class="main-title">
-                    Entrar em contato<span>.</span>
-                </h1>
-            </div>
-            <P>
-                Minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou querendo conversar, estarei do outro lado respondendo suas mensagens!
-            </P>
-            <div class="btn-links-project arquivo">
+        <!--projetos-->
+        <section id="works">
+            <h1 class="main-title">Projetos<span>.</span></h1>
+            <!--<div class="btn-links-project arquivo">
                 <div class="btn-animado">
-                    <a href="mailto:muambalas@gmail.com">
-                        Diga Olá!
-                    </a>
+                    <a href="../sotao/sota.html">Sótão</a>
+                </div>
+            </div>-->
+            <div class="containerMax">
+                <div class="project-body" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xjovhxra.json"
+                            trigger="loop"
+                            colors="primary:#fabd21,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <p>
+                            Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                    </div>
+                </div>
+                <div class="project-body" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xjovhxra.json"
+                            trigger="loop"
+                            colors="primary:#fabd21,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <p>
+                            Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                    </div>
+                </div>
+                <div class="project-body" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xjovhxra.json"
+                            trigger="loop"
+                            colors="primary:#fabd21,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <p>
+                            Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
+                        </p>
+                    </div>
+                    <div class="project-image"></div>
+                </div>
+                <div class="project-body" data-aos="fade-up"
+                data-aos-duration="3000">
+                    <div class="head-box">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/xjovhxra.json"
+                            trigger="loop"
+                            colors="primary:#fabd21,secondary:#fabd21"
+                            style="width:75px;height:75px">
+                        </lord-icon>
+                        <p>
+                            Trabalhando nisso, desculpe! Pouco em breve estará disponivel.
+                        </p>
+                    </div>
+                    <div class="project-image"></div>
+                </div>
+            </div>
+            <div class="btn-repositorio">
+                <div class="btn-animado unikB">
+                    <a href="#">Repositório no Github</a>
                 </div>
             </div>
         </section>
@@ -174,6 +234,27 @@
             <a href="mailto:muambalas@gmail.com">muambalas@gmail.com</a>
         </div>
         <footer>
+            <video autoplay muted loop plays-inline class="background-video">
+                <source class="video" src="vendor/background.mp4" type="video/mp4">
+            </video>
+            <!--contato-->
+            <div id="contact-area">
+                <div class="col-12">
+                    <h1 class="main-title">
+                        Entrar em contato<span>.</span>
+                    </h1>
+                </div>
+                <P>
+                    Minha caixa de entrada está sempre aberta. Se você tem uma pergunta ou querendo conversar, estarei do outro lado respondendo suas mensagens!
+                </P>
+                <div class="btn-links-project arquivo">
+                    <div class="btn-malito">
+                        <a href="mailto:muambalas@gmail.com">
+                            Diga Olá!
+                        </a>
+                    </div>
+                </div>
+            </div>
             <ul class="nav-list-social">
                 <li>
                     <a href="https://www.linkedin.com/in/samuel-nicolau-muambala-b3b436200/" target="_blank">
@@ -211,13 +292,17 @@
     <script src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         var typed = new Typed(".auto-type", {
-            strings: ["HTML", "css", "javascript", "python", "Boostrap", "git", "github"],
-            typeSpeed: 150,
+            strings: ["HTML", "css", "javascript", "python", "Bootstrap", "git", "github"],
+            typeSpeed: 60,
             backSpeed: 150,
             loop: true
         })
+        AOS.init({
+            duration: 1600,
+        });
     </script>
 </body>
 </html>

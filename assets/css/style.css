@@ -13,7 +13,7 @@ html{
 }
 :root {
   --color-secundary: #fabd21;
-  --color-primary: hsl(0, 0%, 9%);
+  --color-primary: #171717;
   --text-color: #ffff;
   --text-color-light: rgb(216, 216, 216);
   --back-yellow-light: rgba(250, 188, 33, 0.562);
@@ -79,8 +79,8 @@ header {
   left: 0;
   z-index: 999;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(24px);
+  background: #171717e0;
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(24px);
 }
 .logo {
@@ -190,7 +190,6 @@ ul > li {
   }
 }
 /* sections */
-#works,
 #service-area,
 #about,
 #contact-area,
@@ -198,18 +197,35 @@ ul > li {
   margin: 60px 0;
   padding: 96px 30px;
 }
-/* about-area*/
-#main .containerMax {
-  height: 95vh;
+#works{
+  padding-top: 30px;
 }
-.containerMax {
-  max-width: 1200px;
-  margin: 0 auto;
+#works .main-title{
+  padding: 0 30px;
+}
+#works .containerMax{
+  margin: 50px 0;
   height: auto;
+}
+
+#works .containerMax .project-body{
+  text-align: center;
+  width: 337px;
+  border-radius: none;
+}
+/* about-area*/
+#main{
+  width: 100%;
+  height: 80vh;
+  margin-top: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 30px;
+}
+.containerMax{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #service-area .containerMax,
 #works .containerMax{
@@ -217,8 +233,7 @@ ul > li {
   flex-direction: row;
   flex-wrap: wrap;
 }
-#service-area .box-service,
-#works .project-body{
+#service-area .box-service{
   flex: 1 1 325px;
 }
 #sota-area .containerMax{
@@ -227,51 +242,44 @@ ul > li {
 #sota-area .main-title{
   margin-top: 6%;
 }
-#main .containerMax{
-  background: url("../img/nicode.png") no-repeat bottom;
-  background-size: 500px;
-  background-attachment: fixed;
-}
-#main .containerMax .box-coluna{
-  width: 550px;
+#main .containerMax .container{
+  width: 60%;
   height: 400px;
+}
+#main .containerMax .container:not(:nth-child(2)){
   padding-top: 10%;
 }
-#main .containerMax .box-coluna p{
+#main .containerMax .container p{
   font-size: 16px;
   font-weight: 500;
   width: 380px;
 }
-#main .containerMax .box-coluna .main-title{
+#main .containerMax .container .main-title{
   text-align: end;
 }
-#main .containerMax .box-coluna p:nth-child(2){
+#main .containerMax .container p:nth-child(2){
   float: right;
   text-align: start;
 }
-#main .containerMax .box-coluna:nth-child(2){
+#main .containerMax .container:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about{
+  text-align: center;
+  background: #1c1c1c;
   display: none;
 }
-#main .containerMax .box-coluna img{
-  display: none;
+#about p{
+  width: 60%;
 }
 #about .content-about{
   order: 2;
 }
-#about .profile-foto{
-  order: 1;
-}
-.img-user {
-  width: 300px;
+#main .iconboots{
+  width: 80%;
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.imagMobile{
-  display: none;
-}
-#main .profile-foto .img-user{
   animation: up-down 2s ease-in-out infinite alternate-reverse both; /* efeito cima baixo */
 }
 @keyframes up-down {
@@ -313,6 +321,7 @@ ul > li {
     filter: blur(12px) opacity(0%);
   }
 }
+/* btn */
 .btn-animado {
   position: relative;
   display: inline-block;
@@ -335,6 +344,19 @@ ul > li {
   transform: scaleY(1);
   transition-delay: 0.5s;
 }
+.btn-animado:before:nth-child(4){
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% - 7px);
+  background: transparent;
+  transition: 0.5s ease-in-out;
+  transform: scaleY(1);
+  transition-delay: 0.5s;
+}
+
 .btn-animado:hover::before {
   transform: scaleY(0);
 }
@@ -357,7 +379,18 @@ ul > li {
   position: relative;
   z-index: 2;
 }
-.arquivo {
+/* btn malito */
+.btn-malito {
+  border: 2px solid var(--color-secundary);
+  color: var(--text-color);
+  padding: 5px 15px;
+  letter-spacing: 2px;
+}
+.btn-malito a {
+  position: relative;
+  z-index: 2;
+}
+.btn-repositorio {
   text-align: center;
   margin: 45px;
 }
@@ -465,11 +498,11 @@ ul > li {
   text-align: start;
   font-size: 18px;
   letter-spacing: -1px;
+  
   min-height: 250px;
   height: 270px;
   margin: 10px;
   padding: 0 20px;
-  border-radius: 5px;
   flex-basis: calc(33% -20px);
   background: var(--cor-base);
   display: flex;
@@ -478,15 +511,53 @@ ul > li {
   flex-direction: column;
   flex-wrap: wrap;
 }
+.project-body{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 250px;
+  height: 560px;
+  background-size: cover;
+}
+.project-body:nth-child(1){
+  background-image: url('../../vendor/image/transform.jpg');
+}
+.project-body:nth-child(2){
+  background-image: url('../../vendor/image/flyspider.jpg');
+}
+.project-body:nth-child(3){
+  background-image: url('../../vendor/image/bots.jpg');
+}
+.project-body:nth-child(4){
+  background-image: url('../../vendor/image/porche.jpg');
+}
+
+.project-image{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  transition: 2s ease;
+}
+.project-image:hover{
+  opacity: 0;
+}
+.project-body .head-box{
+  position: absolute;
+  top: 70%;
+  left: 0;
+  z-index: 1;
+}
 .box-service,
 .project-body{
   transition: all 0.3s ease;
 }
+.box-service{
+  border-radius: 5px;
+}
 .head-box{
   width: 100%;
   user-select: none;
-}
-.head-box .title-project{
 }
 .project-body .head-box{
   text-align: center;
@@ -555,9 +626,19 @@ ul > li {
   transition: 0.6s;
 }
 /* rodapé */
+.background-video{
+  position: absolute;
+  right: 0; 
+  z-index: -1;
+}
+.video{
+  height: 300px;
+}
 footer {
+  position: relative;
   margin-top: 15px;
   padding: 40px 30px;
+  overflow: hidden;
 }
 footer p {
   text-align: center;
@@ -719,25 +800,25 @@ tbody td ion-icon:hover {
     padding: 20% 0 45px 0;
     flex-direction: column;
   }
-  #main .containerMax .box-coluna{
+  #main .containerMax .container{
     width: 95%;
     height: auto;
   }
-  #main .containerMax .box-coluna .main-title {
+  #main .containerMax .container .main-title {
     text-align: start;
   }
-  #main .containerMax .box-coluna p:nth-child(2) {
+  #main .containerMax .container p:nth-child(2) {
     width: auto;
     float: left;
     text-align: start;
   }
-  #main .box-coluna .big-heading{
+  #main .container .big-heading{
     font-size: 60px;
   }
-  #main .box-coluna .sub-heading{
+  #main .container .sub-heading{
     font-size: 40px;
   }
-  #main .containerMax .box-coluna img{
+  #main .containerMax .container img{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -824,16 +905,16 @@ tbody td ion-icon:hover {
     margin-bottom: 40%;
     height: auto;
   }
-  #main .box-coluna:nth-child(2){
+  #main .container:nth-child(2){
     display: none;
   }
-  #main .box-coluna .big-heading{
+  #main .container .big-heading{
     font-size: 40px;
   }
-  #main .box-coluna .sub-heading{
+  #main .container .sub-heading{
     font-size: 25px;
   }
-  #main .box-coluna p br{
+  #main .container p br{
     display: none;
   }
   .imagMobile{
@@ -879,10 +960,10 @@ tbody td ion-icon:hover {
   #contact-area{
     height: auto;
   }
-  #main .containerMax .box-coluna p{
+  #main .containerMax .container p{
     width: auto;
   }
-  #main .containerMax .box-coluna p:nth-child(2){
+  #main .containerMax .container p:nth-child(2){
     float: none;
     text-align: start;
   } 
@@ -892,9 +973,28 @@ tbody td ion-icon:hover {
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .project-body .head-box{
+    top: 20%;
+  }
   .skills-content .box-skills {
     display: flex;
     flex-direction: row;
+  }
+  .project-body:nth-child(1){
+    background-image: url('../../vendor/image/transform.png');
+  }
+  .project-body:nth-child(2){
+    background-image: url('../../vendor/image/flyspider.png');
+  }
+  .project-body:nth-child(3){
+    background-image: url('../../vendor/image/bots.png');
+  }
+  .project-body:nth-child(4){
+    background-image: url('../../vendor/image/porche.png');
+  }
+  .project-body{
+    width: 390px;
+    height: 300px;
   }
   /* slider service */
   nav label {
