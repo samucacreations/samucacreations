@@ -147,7 +147,7 @@ ul > li {
 }
 /* menu mobile*/
 .big-heading {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Fira Code", monospace;
 }
 .sub-heading{
@@ -440,6 +440,7 @@ ul > li {
   color: var(--back-yellow-light);
 }
 #skills-area{
+  display: none;
   height: 65vh;
   background: rgba(0, 0, 0, 0.473);
 }
@@ -516,11 +517,11 @@ ul > li {
   padding: 0;
   margin: 0;
   min-height: 250px;
-  height: 560px;
+  height: 400px;
   background-size: cover;
 }
 .project-body:nth-child(1){
-  background-image: url('../../vendor/image/transform.jpg');
+  background-image: url('../../vendor/image/sc01.png');
 }
 .project-body:nth-child(2){
   background-image: url('../../vendor/image/flyspider.jpg');
@@ -536,7 +537,7 @@ ul > li {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.4;
   transition: 2s ease;
 }
 .project-image:hover{
@@ -544,7 +545,7 @@ ul > li {
 }
 .project-body .head-box{
   position: absolute;
-  top: 70%;
+  top: 30%;
   left: 0;
   z-index: 1;
 }
@@ -980,8 +981,8 @@ tbody td ion-icon:hover {
     display: flex;
     flex-direction: row;
   }
-  .project-body:nth-child(1){
-    background-image: url('../../vendor/image/transform.png');
+  /*.project-body:nth-child(1){
+    background-image: url('../../vendor/image/sc01.png');
   }
   .project-body:nth-child(2){
     background-image: url('../../vendor/image/flyspider.png');
@@ -991,7 +992,7 @@ tbody td ion-icon:hover {
   }
   .project-body:nth-child(4){
     background-image: url('../../vendor/image/porche.png');
-  }
+  }*/
   .project-body{
     width: 390px;
     height: 300px;
