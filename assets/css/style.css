@@ -19,6 +19,7 @@ html{
   --back-yellow-light: rgba(250, 188, 33, 0.562);
   --back-white-light: rgba(255, 255, 255, 0.726);
   --cor-base: rgba(153, 153, 153, 0.047);
+  --text-letter-font: 18px;
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;
@@ -68,7 +69,7 @@ a:hover {
 header {
   text-align: center;
   font-family: "Fira Code", monospace;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,7 +102,7 @@ header {
   transition: 0.5s;
 }
 .nav-ol-list li {
-  margin-left: 40px;
+  margin: 0 40px;
 }
 /* animate icon */
 .nav-list-social i{
@@ -255,9 +256,9 @@ ul > li {
   padding-top: 10%;
 }
 #main .containerMax .container p{
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  width: 380px;
+  width: 400px;
 }
 #main .containerMax .container .main-title{
   text-align: end;
@@ -634,14 +635,6 @@ ul > li {
   transition: 0.6s;
 }
 /* rodapé */
-.background-video{
-  position: absolute;
-  right: 0; 
-  z-index: -1;
-}
-.video{
-  height: 300px;
-}
 footer {
   position: relative;
   margin-top: 15px;
@@ -651,7 +644,7 @@ footer {
 footer p {
   text-align: center;
   font-family: "Fira Code", monospace;
-  font-size: 14px;
+  font-size: 16px;
 }
 footer .nav-list-social {
   display: none;
