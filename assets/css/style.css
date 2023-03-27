@@ -743,6 +743,7 @@ tbody td ion-icon:hover {
   }
   .nav-list,
   .nav-ol-list {
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -764,7 +765,7 @@ tbody td ion-icon:hover {
   }
   .line {
     display: block;
-    border-top: 3px solid var(--back-yellow-light);
+    border-top: 3px solid var(--color-secundary);
     width: 30px;
     height: 30px;
     z-index: 15;
@@ -780,7 +781,7 @@ tbody td ion-icon:hover {
   .line::before {
     content: "";
     display: block;
-    border-top: 3px solid var(--back-yellow-light);
+    border-top: 3px solid var(--color-secundary);
     height: 2px;
     margin-top: 9px;
     transition: 0.5s;
