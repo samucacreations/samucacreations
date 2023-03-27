@@ -12,7 +12,7 @@ html{
   scroll-behavior: smooth;
 }
 :root {
-  --color-secundary: #fabd21;
+  --color-secundary: #EBEB00;
   --color-primary: #171717;
   --text-color: #ffff;
   --text-color-light: rgb(216, 216, 216);
@@ -54,7 +54,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fabd21;
+  background-color: var(--color-secundary);
   border-radius: 8px;
 }
 a {
@@ -84,6 +84,7 @@ header {
   -webkit-backdrop-filter: blur(24px);
 }
 .logo {
+  padding: 0 0 0 20px;
   height: 60px;
 }
 .nav-list {
@@ -141,6 +142,10 @@ ul {
 ul > li {
   margin-right: 20px;
 }
+/* pulsar cursor */
+
+
+
 /* menu mobile */
 .btn-mobile {
   display: none;
@@ -373,7 +378,7 @@ ul > li {
 }
 .btn-animado:hover::after {
   transform: scaleX(0);
-  background: var(--back-yellow-light);
+  background: var(--color-secundary);
 }
 .btn-animado a {
   position: relative;
@@ -516,8 +521,10 @@ ul > li {
   position: relative;
   padding: 0;
   margin: 0;
-  min-height: 250px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
   background-size: cover;
 }
 .project-body:nth-child(1){
@@ -527,7 +534,7 @@ ul > li {
   background-image: url('../../vendor/image/sc02.png');
 }
 .project-body:nth-child(3){
-  background-image: url('../../vendor/image/bots.jpg');
+  background-image: url('../../vendor/image/sc03.png');
 }
 .project-body:nth-child(4){
   background-image: url('../../vendor/image/porche.jpg');
@@ -623,7 +630,7 @@ ul > li {
   writing-mode: vertical-rl;
 }
 .myemail a:hover {
-  color: #fabc21b6;
+  color: var(--color-secundary);
   transition: 0.6s;
 }
 /* rodapé */

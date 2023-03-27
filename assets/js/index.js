@@ -28,3 +28,14 @@ $(document).ready(function () {
     $(".toggle:visible").not(myelement).slideUp();
   });
 });
+
+function createExplosion(event) {
+  const explosion = document.createElement('span');
+  explosion.classList.add('explosion');
+  explosion.style.left = event.clientX + 'px';
+  explosion.style.top = event.clientY + 'px';
+  document.body.appendChild(explosion);
+  setTimeout(() => {
+    explosion.remove();
+  }, 1000);
+}
