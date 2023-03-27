@@ -805,6 +805,7 @@ tbody td ion-icon:hover {
   #main .containerMax .container{
     width: 95%;
     height: auto;
+    margin: 40px 0;
   }
   #main .containerMax .container .main-title {
     text-align: start;
