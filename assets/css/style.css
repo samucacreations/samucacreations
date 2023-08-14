@@ -558,18 +558,6 @@ ul > li {
 .project-body:nth-child(8){
   background-image: url('../../vendor/image/sc08.png');
 }
-.project-body:nth-child(9){
-  background-image: url('../../vendor/image/sc09.png');
-}
-.project-body:nth-child(10){
-  background-image: url('../../vendor/image/sc10.png');
-}
-.project-body:nth-child(11){
-  background-image: url('../../vendor/image/sc11.png');
-}
-.project-body:nth-child(12){
-  background-image: url('../../vendor/image/sc12.png');
-}
 
 .project-image{
   width: 100%;
@@ -1078,7 +1066,7 @@ tbody td ion-icon:hover {
   height: 200px;
   overflow: hidden;
   margin: 10px;
-  border: 1px solid #616161;
+  border: 1px solid #6161613f;
 }
 
 .logoClient {
@@ -1114,6 +1102,7 @@ tbody td ion-icon:hover {
 
 .boxClientSide:hover .overlay {
   opacity: 1;
+    border: 1px solid #EBEB00;
 }
 
 @media (max-width: 767px) {
