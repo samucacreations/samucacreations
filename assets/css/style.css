@@ -529,22 +529,22 @@ ul > li {
   padding: 0;
   margin: 0;
   width: 300px;
-  height: 300px;
+  height: 380px;
   max-width: 100%;
   max-height: 100%;
   background-size: cover;
 }
 .project-body:nth-child(1){
-  background-image: url('../../vendor/image/scSmall01.png');
+  background-image: url('../../vendor/image/smucua.png');
 }
 .project-body:nth-child(2){
-  background-image: url('../../vendor/image/scSmall02.png');
+  background-image: url('../../vendor/image/siogurte.png');
 }
 .project-body:nth-child(3){
-  background-image: url('../../vendor/image/scSmall03.png');
+  background-image: url('../../vendor/image/stravel.png');
 }
 .project-body:nth-child(4){
-  background-image: url('../../vendor/image/scSmall04.png');
+  background-image: url('../../vendor/image/smarket.png');
 }
 .project-body:nth-child(5){
   background-image: url('../../vendor/image/scSmall05.png');
@@ -556,13 +556,13 @@ ul > li {
   background-image: url('../../vendor/image/scSmall07.png');
 }
 .project-body:nth-child(8){
-  background-image: url('../../vendor/image/scSmall08.png');
+  background-image: url('../../vendor/image/scSmall10.png');
 }
 .project-body:nth-child(9){
   background-image: url('../../vendor/image/scSmall09.png');
 }
 .project-body:nth-child(10){
-  background-image: url('../../vendor/image/scSmall10.png');
+  background-image: url('../../vendor/image/snectar.png');
 }
 .project-body:nth-child(11){
   background-image: url('../../vendor/image/scSmall11.png');
@@ -570,9 +570,46 @@ ul > li {
 .project-body:nth-child(12){
   background-image: url('../../vendor/image/scSmall12.png');
 }
+.project-body:nth-child(13){
+  background-image: url('../../vendor/image/syakira.png');
+}
+.project-body:nth-child(14){
+  background-image: url('../../vendor/image/szap.png');
+}
+.project-body:nth-child(15){
+  background-image: url('../../vendor/image/sgame.png');
+}
+.project-body:nth-child(16){
+  background-image: url('../../vendor/image/sbasket.png');
+}
+.project-body:nth-child(17){
+  background-image: url('../../vendor/image/scontrol.png');
+}
+.project-body:nth-child(18){
+  background-image: url('../../vendor/image/sitambe.png');
+}
+.project-body:nth-child(19){
+  background-image: url('../../vendor/image/sdflayer.png');
+}
+.project-body:nth-child(20){
+  background-image: url('../../vendor/image/sspazio.png');
+}
+.project-body:nth-child(21){
+  background-image: url('../../vendor/image/squenpink.png');
+}
+.project-body:nth-child(22){
+  background-image: url('../../vendor/image/spequenos.png');
+}
+.project-body:nth-child(23){
+  background-image: url('../../vendor/image/sluda.png');
+}
+.project-body:nth-child(24){
+  background-image: url('../../vendor/image/shennessey.png');
+}
 .project-image{
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   background-color: #000;
   opacity: 0.4;
   transition: 2s ease;
@@ -682,6 +719,9 @@ footer .rodape-layout {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.rodape-layout span{
+  color: var(--color-secundary);
 }
 /* SOTA - Armazem */
 #sota-area {
